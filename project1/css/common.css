@@ -1,0 +1,156 @@
+@import url('https://meyerweb.com/eric/tools/css/reset/reset200802.css');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+:root {
+    /* 색상의 가중치가 다름 */  
+  --gray10: #eeeeee;
+  --gray20: #fcfcfc;
+  --gray30: #f1f1f1;
+  --gray40: #dfdfdf;
+  --gray50: #c5c5c5;
+  --gray60: #a3a3a3;
+  --gray70: #7c7c7c;
+  --gray80: #505050;
+  --gray90: #252525;
+  --gray100: #000000;
+  --gradient: linear-gradient(53deg, #4c6dd0 2.85%, #04befe 151.96%);
+  --gradientre: linear-gradient(46deg, #04befe -23.14%, #4c6dd0 91.64%);
+  --primary10: #c6d3fc;
+  --primary20: #97aef3;
+  --primary30: #6e8be5;
+  --primary40: #4c6dd0;
+  --primary50: #3354b7;
+  --primary60: #2343a1;
+  --primary70: #193791;
+  --primary80: #143188;
+  --primary90: #112e85;
+  --secondary10: #fdf5f1;
+  --secondary20: #f9ede8;
+  --secondary30: #f2e2da;
+  --secondary40: #e9d1c6;
+  --secondary50: #ddbdae;
+  --secondary60: #cda492;
+  --secondary70: #b88a74;
+  --secondary80: #a06f58;
+  --secondary90: #875741;
+  --col: 8.8rem;
+  --g: 1.4rem; /* 2.8rem */
+  --gu: calc(var(--g) * 2);
+  --row: 2.8rem;  
+  --unit: calc(var(--col) + var(--gu));
+  --layout: calc(var(--unit) * 12 - var(--gu));
+}
+
+html {
+  font-size: 62.5%;
+  /* 16*62.5/100 = 10px */
+}
+
+body {
+  font-family: 'Pretendard Variable', sans-serif;
+  line-height: 1.75;
+  color: var(--gray90, #252525);
+}
+
+a {
+  color: var(--gray80, #505050);
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.button,
+button {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.helper {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.comment {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+body,
+a,
+.contents {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.h4-500 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+h4,
+.h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.h3-500 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+h3,
+.h3 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+}
+
+.h2-500 {
+  font-size: 3.1rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+h2,
+.h2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+}
+
+h1,
+.h1 {
+  font-size: 4.8rem;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  line-height: 1.25;
+}
+/* 옆으로 나열 */
+.df {
+  display: flex;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+/* 대체 텍스트가 아니 접근성을 위한 숨김 텍스트를 제공할 때 */
+.ir_so {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
