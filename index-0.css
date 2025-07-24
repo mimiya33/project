@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css);
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  position: relative;
+      font-family: 'NotoSans-Light', '맑은 고딕', 'Malgun Gothic', sans-serif;
+      font-size: 16px;
+      color: #555;
+}
+.nav {
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);;
+    position: relative;
+}
+
+.all_wrap {
+    width: 100%;
+    height: 100px; /* 높이 100px로 고정 */
+    max-width: 1800px;
+    line-height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 10vw;
+    min-width: 120px;
+    max-width: 200px;
+    height: 100px; /* 높이 100px로 고정 */
+    display: flex;
+    align-items: center;
+}
+.dep1>li {
+    display: block;
+    flex: 1 1 18%;
+    position: relative; /* 추가 */
+}
+
+.dep1 li>a {
+    display: flex;
+    padding: 0 5rem;
+    width: 100%;
+    color: #333;
+    line-height: 60px;
+    font-family: 'Noto Sans Korean', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: max(1.2vw, 16px);
+}
+
+.w100 {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 100%; /* dep1 li 바로 아래에 위치 */
+    box-shadow: 0 2px 2px rgba(0,0,0,0.07);
+    overflow: hidden;
+    height: 0;
+    padding: 0 0;
+    transition: all .5s;
+    z-index: 2;
+}
+
+.w100:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.dep2 {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  z-index: 55555;
+}
+.dep2 li>a {
+  color: #666;
+  font-size: max(1.0vw, 16px);
+  font-weight: 280;
+  padding: 0 1rem;
+  display: flex;           /* 추가 */
+  justify-content: center; /* 가로 중앙정렬 */
+  align-items: center;     /* 세로 중앙정렬 */
+  text-align: center;      /* 텍스트 중앙정렬 */
+}
+
+.dep1:hover .w100 {
+  height: auto;
+  padding: 15px 0;
+}
+.util {
+  display: flex;
+  align-items: center;
+  font-family: 'noto sans korean', sans-serif;
+  font-weight: 280;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.util>li {
+  padding: 0 2rem;
+  border-right: 1px solid #ccc;
+  height: 20px; /* 원하는 높이로 조정 */
+  display: flex;
+  align-items: center;
+}
+
+.util>li:last-child {
+  border-right: none; /* 마지막에는 구분선 제거 */
+  padding-right: 0;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* 필요시 이미지 잘림 없이 꽉 채우기 */
+}
+
+.search img {
+  width: 85%;
+  height: auto;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;            /* flex로 변경 */
+  flex-direction: column;   /* 세로 정렬 */
+  align-items: center;      /* 가로 중앙정렬 */
+  justify-content: center;  /* 세로 중앙정렬 */
+  text-align: center;
+
+}
+
+.title {
+  font-family: 'Montserrat', 'NotoSans-Light', sans-serif;
+  font-size: 240px;
+  font-weight: bolder;
+  display: flex;
+  /* color: #919191; */
+}
+
+.section1 {
+  width: 100%;
+  min-height: 1169px;
+  margin-top: 0;
+  background: green;
+  display: flex;            /* flex로 변경 */
+  flex-direction: column;   /* 세로 정렬 */
+  align-items: center;      /* 가로 중앙정렬 */
+  text-align: center;
+  color: #fff;
+}
+
+.section2 {
+  width: 100%;
+  min-height: 2043px;
+  margin-top: 0;
+  background: #ffffff;
+  display: flex;            /* flex로 변경 */
+  flex-direction: column;   /* 세로 정렬 */
+  align-items: center;      /* 가로 중앙정렬 */
+  text-align: center;
+  color: #919191;
+} 
+.section3 {
+  width: 100%;
+  min-height: 1619px;
+  margin-top: 0;
+  background: #a6ecd4;
+  display: flex;            /* flex로 변경 */
+  flex-direction: column;   /* 세로 정렬 */
+  align-items: center;      /* 가로 중앙정렬 */
+  text-align: center;
+  color: #919191;
+} 
+footer{
+  width: 100%;
+  min-height: 410px;
+  background: #bcbbbb;
+  display: flex;            /* flex로 변경 */
+  flex-direction: column;   /* 세로 정렬 */
+  align-items: center;      /* 가로 중앙정렬 */
+  justify-content: center;  /* 세로 중앙정렬 */
+  text-align: center;
+}
