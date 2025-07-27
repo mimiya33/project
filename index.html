@@ -15,13 +15,8 @@
     <meta property="og:title" content="롯데칠성음료 리디자인 프로젝트" />
     <!-- 깃허브 url넣어라. -->
     <meta property="og:url" content="깃허브" />
-    <meta
-      property="og:type"
-      content="website"
-      <meta
-      property="og:image"
-      content="images/logo.png"
-    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logo.png" />
     <!-- og_card 이미지도 넣어라. -->
     <meta property="og:site_name" content="롯데칠성음료 리디자인 프로젝트" />
     <meta
@@ -29,26 +24,18 @@
       content="브랜드 이미지와 사용자 경험을 향상시키기 위해 롯데칠성음료 기업 웹사이트를 리디자인한 퍼블리싱 프로젝트입니다. 직관적인 UI와 반응형 구조를 구현했습니다."
     />
     <title>롯데칠성음료리디자인</title>
-    <link
-      rel=" stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
-    />
-    <link rel="stylesheet" href="css/common-1.css" />
-    <link rel="stylesheet" href="index-1.css" />
-    <link rel="shortcut icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/m3.css" />
   </head>
-
   <body>
-    <div class="wrap">
-      <header>
-        <div class="all_wrap">
+    <div id="wrap">
+      <header id="header">
+        <div class="wrap-all">
           <h1 class="logo">
-            <a href="index.html"
-              ><img src="images/logo.png" alt="롯데칠성음료로고"
-            /></a>
+            <img src="images/logo.png" alt="롯데칠성음료로고" />
           </h1>
-          <!------ //.logo ------>
-
+          <!-- //logo -->
           <nav class="nav">
             <ul>
               <li>
@@ -117,44 +104,36 @@
             </ul>
           </nav>
           <!-- //nav -->
-          <ul class="util">
-            <li class="search">
-              <a href="#"><img src="images/search.svg" alt="탐색기" /></a>
-            </li>
-            <li class="lang">ENG</li>
-            <li class="mall">
-              <a href="https://mall.lottechilsung.co.kr/">
-                <img
-                  src="https://company.lottechilsung.co.kr/common/images/logo_chill_mall.png"
-                  alt="칠성몰 바로가기"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <!-- 이미지 슬라이드 -->
-            <div class="swiper-slide">
-              <img src="images/slide1_chil.png" alt="칠성사이다" />
-            </div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+          <div class="util">
+            <a href="#" class="search">
+              <img src="images/search.svg" alt="탐색기" />
+            </a>
+            <a href="#" class="lang">ENG</a>
+            <a href="https://mall.lottechilsung.co.kr/" class="mall">
+              <img
+                src="https://company.lottechilsung.co.kr/common/images/logo_chill_mall.png"
+                alt="칠성몰 바로가기"
+              />
+            </a>
           </div>
-          <!-- navigation buttons -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-          <span class="scrolltxt">SCROLL DOWN</span>
+          <!-- //util -->
         </div>
-        <!-- //배경이미지 슬라이드 -->
       </header>
       <!-- //header -->
+      <!-- Swiper -->
+      <div id="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/slide1_chil2.png" alt="칠성사이다" />
+          </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- //swiper -->
       <main id="section">
         <div class="section1">
           <p class="title">Brand</p>
@@ -176,7 +155,8 @@
       <footer></footer>
       <!-- //footer -->
     </div>
+    <!-- //wrap -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script/index.js"></script>
+    <script src="script/03.js"></script>
   </body>
 </html>

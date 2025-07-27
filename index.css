@@ -1,110 +1,147 @@
 @charset "utf-8";
-@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+@import url('https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css');
 @import url('https://fonts.cdnfonts.com/css/montserrat');
 
-* {
-    text-decoration: none;
-}
-.noto {
-    font-family: 'Noto Sans Korean', sans-serif;
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 body {
-    position: relative;
-    font-family: 'NotoSans-Light', '맑은 고딕', 'Malgun Gothic', sans-serif;
-    font-size: 16px;
-    color: #555;
-    line-height: 1;
-    letter-spacing: -0.6px;
-
+  position: relative;
+  font-family: 'NotoSans-Light', '맑은 고딕', 'Malgun Gothic', sans-serif;
+  font-size: 16px;
+  color: #555;
+  overflow-x: hidden;
+  line-height: 1;
+  letter-spacing: -0.6px;
 }
 
+a {
+  color: #000;
+}
 #wrap {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  background: #fff;
 }
 
-#all_wrap {
-    width: 100%;
-    height: 100px; /* 높이 100px로 고정 */
-    max-width: 1800px;
-    line-height: 100px;
-    display: flex;
+#header::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #efefef;  
+  left: 0;
+  top: 100px;
+  z-index: 100;
+  transition: all 400ms;
+}
+#header.on::after {
+  height: 720.75px;
+}
+.wrap-all {
+  position: relative;
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo {
-    width: 20%;
-    height: 100%; /* 높이 100px로 고정 */
-    line-height: 100px;
-    align-items: center;
-    /* transform: translate(40px, 18px); */
-    background-color: yellow;
-}
-.nav {
-    width: 60%;
-    height: 100%;
-    margin: 0;
-}
-.util {
-    display: flex;
-    width: 20%;
-    height: 100px;
-    align-items: center;
-    font-family: 'noto sans korean', sans-serif;
-    font-weight: 280;
-}
-.util > li {
-    padding: 0 2rem;
-    border-right: 1px solid #ccc;
-    height: 20px; /* 원하는 높이로 조정 */
-    align-items: center;
+.wrap-all > .logo {
+  position: absolute;
+  left: 0;
+  width: 15%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.util > li:last-child {
-    border-right: none; /* 마지막에는 구분선 제거 */
-    padding-right: 0;
+.wrap-all > .logo img {
+  height: 70px; /* 로고 이미지 크기 크게 */
+  width: auto;
 }
 
-.lang {
-    font-weight: 700;
+.wrap-all .nav {
+  width: 70%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.wrap-all .util {
+  position: absolute;
+  right: 0;
+  width: 15%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  font-family: 'noto sans korean', sans-serif;
+  font-weight: 500;
+  display: flex;
 }
 
-.mall {
-    transform: translateY(-8px);
-}
-#all_wrap::after {
-    content: "";
-    width: 100%;
-    height: 0px;
-    background-color: #ffffff;
-    position: absolute;
-    left: 0;
-    top: 100px;
-    z-index: 1;
-    transition: all 400ms;
-}
-#all_wrap.on::after {
-    height: 590px;
+.wrap-all> .util> a {
+  padding: 0 2rem;
+  border-right: 1px solid #ccc;
+  line-height: 20px; 
+  display: flex;
+  align-items: center;
+  height: 100px;
 }
 
+.wrap-all> .util> a:last-child {
+  border-right: none; /* 마지막에는 구분선 제거 */
+  padding-right: 0;
+}
 #swiper {
-    width: 100vw;
-    height: 100vh;
-    background-color: #d9d9d9;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-}
-.swiper-wrapper {
-    display: flex;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
 }
 
+.swiper-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.swiper-slide img{
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#section {
+  display: block;
+}
 .title {
   font-family: 'Montserrat', 'NotoSans-Light', sans-serif;
   font-size: 240px;
   font-weight: bolder;
-  display: flex;
   /* color: #919191; */
 }
 
@@ -155,57 +192,58 @@ footer{
 }
 /* nav */
 .nav {
-    z-index: 1000;
+  z-index: 1000;
 }
 .nav > ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
 }
 .nav > ul > li {
-    position: relative;
+  position: relative;
 }
 .nav > ul > li > a {
-    display: inline-block;
-    padding: 0px 52px;
+  display: block;
+  /* padding: 0px 52px; */
   /* 추가 */
-    color: #333;
-    line-height: 100px;
-    font-family: 'Noto Sans-Bold', sans-serif;
-    font-weight: bold;
-    font-size: min(1.2vw, 18px);
-    /* //추가 */
-    background-color: #b0b0b0;
+  font-family: 'Noto Sans-Bold', sans-serif;
+  font-size: max(1vw, 18px);
+  padding: 0 53px;
+  color: #333;
+  line-height: 100px;
+  font-weight: bold;
+  text-align: center;
 }
 .nav > ul > li > a:hover {
-    background-color: #696969;
+  background-color: #ffffff;
 }
 .nav > ul > li > ul {
-    position: absolute;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    text-align: center;
-    padding: 15px 0px 0px;
-    display: block;
-    height: 0;
-    overflow: hidden;
-    transition: all 400ms;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px 0px;
+  display: none;
+  height: auto;
+  overflow: hidden;
+  transition: all 400ms;
 }
 .nav > ul > li > ul > li > a {
-    display: inline-block;
-    padding: 10px 0px;
-    width: 100%;
-    color: #666;
-    box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 300;
-    font-size: min(1vw, 16px);
+  display: inline-block;
+  padding: 15px 0px;
+  width: 100%;
+  color: #8a939d;
+  letter-spacing: -0.6px;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  font-weight: 300; /* light 대신 숫자 사용 */
+  font-size: max(1.0vw, 16px);
 }
 .nav > ul > li > ul > li > a:hover {
-    content: '';
-    text-decoration-line: underline;
-    text-underline-offset: 8px;
-    color: green;
+  content: '';
+  text-decoration-line: underline;
+  text-underline-offset: 8px;
+  color: rgb(4, 157, 4);
 }
 

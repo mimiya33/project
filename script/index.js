@@ -4,12 +4,12 @@ navList.addEventListener("mouseover", () => {
   navList.querySelectorAll(".submenu").forEach((sub) => {
     sub.style.height = "340px";
   });
-  document.getElementById("all_wrap").classList.add("on");
+  document.getElementById("wrap-all").classList.add("on");
 });
 
 navList.addEventListener("mouseout", () => {
   navList.querySelectorAll(".submenu").forEach((sub) => {
     sub.style.height = "0px";
   });
-  document.getElementById("all_wrap").classList.remove("on");
+  document.getElementById("wrap-all").classList.remove("on");
 });
