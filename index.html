@@ -24,23 +24,32 @@
       content="브랜드 이미지와 사용자 경험을 향상시키기 위해 롯데칠성음료 기업 웹사이트를 리디자인한 퍼블리싱 프로젝트입니다. 직관적인 UI와 반응형 구조를 구현했습니다."
     />
     <title>롯데칠성음료리디자인</title>
-    <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/m3.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
+
   <body>
     <div id="wrap">
       <header id="header">
-        <div class="wrap-all">
-          <h1 class="logo">
-            <img src="images/logo.png" alt="롯데칠성음료로고" />
-          </h1>
-          <!-- //logo -->
-          <nav class="nav">
-            <ul>
-              <li>
-                <a href="#">기업소개</a>
-                <ul class="submenu">
+        <div class="header_inner">
+          <!-- dep_1 -->
+          <div class="all_wrap df">
+            <h2>
+              <a href="https://company.lottechilsung.co.kr/" class="logo">
+                <img src="images/logo.png" alt="롯데칠성음료로고" />
+              </a>
+            </h2>
+            <!-- //logo -->
+
+            <!-- <a href="javascript:" class="mGnb">
+				<img src="images/mGnb_btn.png" alt="전체메뉴열기">
+			</a> -->
+
+            <ul id="gnb">
+              <li class="dep">
+                <a href="#" class="oneD">기업소개</a>
+                <ul class="twoD inner">
                   <li><a href="#">롯데칠성음료</a></li>
                   <li><a href="#">연혁</a></li>
                   <li><a href="#">수상 및 인증</a></li>
@@ -50,9 +59,9 @@
                   <li><a href="#">공지사항</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">제품홍보</a>
-                <ul class="submenu">
+              <li class="dep">
+                <a href="#" class="oneD">제품홍보</a>
+                <ul class="twoD">
                   <li><a href="#">신제품</a></li>
                   <li><a href="#">대표 브랜드</a></li>
                   <li><a href="#">전체 제품 보기</a></li>
@@ -60,18 +69,18 @@
                   <li><a href="#">뉴스룸</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">투자정보</a>
-                <ul class="submenu">
+              <li class="dep">
+                <a href="#" class="oneD">투자정보</a>
+                <ul class="twoD">
                   <li><a href="#">주가정보</a></li>
                   <li><a href="#">재무정보</a></li>
                   <li><a href="#">공시정보</a></li>
                   <li><a href="#">IR자료실</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">가치경영</a>
-                <ul class="submenu">
+              <li class="dep">
+                <a href="#" class="oneD">가치경영</a>
+                <ul class="twoD">
                   <li><a href="#">ESG경영전략</a></li>
                   <li><a href="#">품질환경경영</a></li>
                   <li><a href="#">윤리경영</a></li>
@@ -81,9 +90,9 @@
                   <li><a href="#">기업지배구조</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">인재채용</a>
-                <ul class="submenu">
+              <li class="dep">
+                <a href="#" class="oneD">인재채용</a>
+                <ul class="twoD">
                   <li><a href="#">인재상/인권경영</a></li>
                   <li><a href="#">인사/교육제도</a></li>
                   <li><a href="#">복리후생/안전건강</a></li>
@@ -92,31 +101,69 @@
                   <li><a href="#">아이디어 제안</a></li>
                 </ul>
               </li>
-              <li>
-                <a href="#">고객센터</a>
-                <ul class="submenu">
+              <li class="dep">
+                <a href="#" class="oneD">고객센터</a>
+                <ul class="twoD">
                   <li><a href="#">고객상담</a></li>
                   <li><a href="#">재품공급문의</a></li>
                   <li><a href="#">공지사항</a></li>
                   <li><a href="#">개인정보처리방침</a></li>
                 </ul>
               </li>
+              <li class="infoD">
+                <div class="stockD">
+                  <p class="tit">롯데칠성음료 보통주</p>
+                  <div class="ovF">
+                    <p class="s1">130,300</p>
+                    <p class="s2 up">
+                      <span class="hiddenTxt">상승</span>
+                      300(+0.23 %)
+                    </p>
+                  </div>
+                  <a
+                    href="https://company.lottechilsung.co.kr/kor/invest/stockinfo/list.do"
+                    class="bt"
+                    >주가정보 바로가기</a
+                  >
+                </div>
+                <div class="recruitD">
+                  <p class="tit">
+                    <span>적극적이고</span>
+                    <br />
+                    <span>노력하는 인재</span>를
+                    <br />
+                    기다립니다.
+                  </p>
+                  <a
+                    href="https://company.lottechilsung.co.kr/kor/recruit/OlderStory/list.do"
+                    class="bt"
+                    >선배들의 이야기
+                    <br />
+                    바로가기
+                  </a>
+                </div>
+              </li>
             </ul>
-          </nav>
-          <!-- //nav -->
-          <div class="util">
-            <a href="#" class="search">
-              <img src="images/search.svg" alt="탐색기" />
-            </a>
-            <a href="#" class="lang">ENG</a>
-            <a href="https://mall.lottechilsung.co.kr/" class="mall">
-              <img
-                src="https://company.lottechilsung.co.kr/common/images/logo_chill_mall.png"
-                alt="칠성몰 바로가기"
-              />
-            </a>
+            <!--</nav>-->
+            <!-- //nav -->
+            <div class="utill">
+              <a href="#" class="sch">
+                <img src="images/search.svg" alt="탐색기" />
+              </a>
+              <a
+                href="https://company.lottechilsung.co.kr/eng/main/index.do"
+                class="lang"
+                >ENG</a
+              >
+              <a href="https://mall.lottechilsung.co.kr/" class="mall">
+                <img
+                  src="https://company.lottechilsung.co.kr/common/images/logo_chill_mall.png"
+                  alt="칠성몰 바로가기"
+                />
+              </a>
+            </div>
+            <!-- //util -->
           </div>
-          <!-- //util -->
         </div>
       </header>
       <!-- //header -->
@@ -157,6 +204,6 @@
     </div>
     <!-- //wrap -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script/03.js"></script>
+    <script src="script/index.js"></script>
   </body>
 </html>
