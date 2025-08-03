@@ -24,6 +24,8 @@
       content="브랜드 이미지와 사용자 경험을 향상시키기 위해 롯데칠성음료 기업 웹사이트를 리디자인한 퍼블리싱 프로젝트입니다. 직관적인 UI와 반응형 구조를 구현했습니다."
     />
     <title>롯데칠성음료리디자인</title>
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -144,8 +146,7 @@
                 </div>
               </li>
             </ul>
-            <!--</nav>-->
-            <!-- //nav -->
+            <!-- //gnb-->
             <div class="utill">
               <a href="#" class="sch">
                 <img src="images/search.svg" alt="탐색기" />
@@ -167,15 +168,59 @@
         </div>
       </header>
       <!-- //header -->
+      <div class="searchPop">
+        <div class="innerArea">
+          <div class="inputArea">
+            <input
+              type="text"
+              name="searchKey"
+              placeholder="검색어를 입력해주세요"
+              title="검색어 입력"
+            />
+            <a href="javascript:" class="btn">
+              <img src="images/searchPop_searchBtn.png" alt="검색" />
+            </a>
+          </div>
+          <a href="javascript:" class="closeBtn">닫기</a>
+        </div>
+      </div>
+      <!-- //searchPop -->
       <!-- Swiper -->
-      <div id="swiper">
+      <div class="swiper swiper-container">
+        <!-- <div
+        class="mainVisual swiper-container subBody swiper-container-horizontal"
+        tabindex="-1"
+      > -->
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="images/slide1_chil2.png" alt="칠성사이다" />
+            <img src="images/slide1_chil.png" alt="칠성사이다" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/slide2_can.png" alt="칸타타" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/slide3_sae.png" alt="새로" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/silde4_kru.png" alt="크러시" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/slide5_han.jpg" alt="윤리경영" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/slide6_fall.jpg" alt="품질환경경영" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/slide7_dev.jpg" alt="혁신과변화" />
           </div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-controls">
+          <div class="swiper-pagination"></div>
+          <button class="playBtn" type="button" aria-label="자동재생 제어">
+            <span class="sr-only">재생/정지</span>
+          </button>
+        </div>
         <!-- Add Navigation -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
