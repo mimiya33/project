@@ -996,7 +996,7 @@ ul, li {
     color: #919191;
 }
 
-.section1 .fixArea .title {
+.section1 .title {
     margin: 0 auto;
     top: 0px;
     font-size: 240px;
@@ -1010,57 +1010,102 @@ ul, li {
     color: #919191; 
 }
 
-.txt2 {
+.section1 .text {
     margin-top: 90px;
     font-size: 24px;
     position: relative;
     width: 100%;
     text-align: center;
 }
-.section3 {
+.section2 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 150px 0 0;
-    background: rgba(39, 145, 115, 0.9);
+    padding: 150px 0 0;   
+    background: #fff;
 }
-.section3 .fixArea {
+
+.section2 .fixArea {
+position: absolute;
+width: 100%;
+top: 150px;
+z-index: 10;
+opacity: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.section2 .fixArea .title {
+font-size: 240px;
+line-height: 170px;
+font-family: 'Montserrat';
+font-weight: 700;
+text-align: center;
+width: 100%;
+position: relative;
+letter-spacing: -8px;
+color: #fff;
+margin-bottom: 0;
+z-index: 11;
+}
+
+.section2 .text {
+margin-top: 40px;
+font-size: 24px;
+font-weight: 340;
+position: relative;
+width: 100%;
+text-align: center;
+color: #fff;
+align-self: center;
+z-index: 11;
+}
+
+.section2 .bgDiv {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.section2 .bgDiv #video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.section2 .bgDiv .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: rgba(39, 145, 115, 0.9);
+    z-index: 2;
+    display: block;
+}
+
+.section3 .fixArea {
+    opacity: 1;
+    position: relative;
     width: 100%;
     top: 150px;
     z-index: 1;
-    opacity: 1;
-    color: #fff;
 }
+
 .section3 .fixArea .title {
-    font-size: 240px;
-    line-height: 170px;
-    font-family: 'Montserrat';
-    font-weight: 700;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    letter-spacing: -8px;
-}
-
-.section3>.fixArea>.title>.txt2 {
-    color: #fff;
-    margin-top: 40px;
-    font-size: 24px;
-    position: relative;
-    width: 100%;
-    text-align: center;
-}
-
-.section4 .fixArea {
-    opacity: 1;
-    position: relative;
-    width: 100%;
-    top: 150px;
-    z-index: 1;
-}
-
-.section4 .fixArea .title {
     font-size: 240px;
     line-height: 170px;
     font-family: 'Montserrat';
@@ -1153,4 +1198,117 @@ ul, li {
     background: url(/images/list_bg4.jpg) no-repeat center center;
     background-size: cover;
     top: 140px;
+}
+
+.content .listDiv:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.chillNews {
+    height: 81px;
+    margin: 0 auto;
+    position: relative;
+    border-top: 1px solid #ddd;
+}
+
+.newsD {
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;    
+}
+
+.leftA {
+    float: left;
+    overflow: hidden;
+    width: 160px;
+}
+
+.leftA .tit {
+    display: block;
+    width: 106px;
+    line-height: 80px;
+    font-family: 'NotoSans';
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+    float: left;
+}
+
+.btnA {
+    display: block;
+    float: left;
+}
+
+.btnA a:first-child {
+    padding: 16px 20px 8px;
+    background: url(/images/mainCon1_news_up.png) no-repeat 20px 18px;
+}
+
+.btnA a {
+    display: block;
+    text-align: center;
+    width: 54px;
+    height: 40px;
+}
+.btnA a:last-child {
+    padding: 8px 20px 16px;
+    background: url(/images/mainCon1_news_down.png) no-repeat 20px 14px;
+}
+
+.newsList .rightA {
+    float: left;
+    position: relative;
+    width: calc(100% - 324px);
+    width: -webkit-calc(100% - 324px);
+    height: 80px;
+    overflow: hidden;
+}
+
+.rightA .list:first-child {
+    top: 0;
+}
+.rightA .list {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+}
+
+.rightA .list .txt {
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 60px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+}
+
+.endA {
+    float: left;
+    width: 134px;
+    margin-left: 30px;
+}
+
+.endA a {
+    display: inline-block;
+    width: 134px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px 0;
+    border-radius: 20px;
+    color: #fff;
+    background: #333;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'NotoSans';
+    font-weight: 500;
 }
