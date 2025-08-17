@@ -39,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // 모든 드롭다운 메뉴 표시
     allTwoD.forEach(function (twoD) {
       twoD.style.display = "block";
+      setTimeout(function () {
+        twoD.classList.add("show");
+      }, 5); // 거의 즉시 애니메이션 시작
     });
 
     // infoD 요소는 220ms 지연 후 표시
@@ -71,7 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 모든 드롭다운 메뉴 숨김
       allTwoD.forEach(function (twoD) {
-        twoD.style.display = "none";
+        twoD.classList.remove("show");
+        setTimeout(function () {
+          twoD.style.display = "none";
+        }, 100); // 빠른 애니메이션 완료 후 숨김
       });
 
       // infoD 요소도 즉시 숨김
@@ -79,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         infoD.style.display = "none";
         console.log("InfoD 숨김");
       }
-    }, 200); // 200ms 지연 후 숨김
+    }, 50); // 50ms 지연 후 숨김
   });
 
   // infoD 영역에 마우스 이벤트 추가
@@ -102,7 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // 모든 드롭다운 메뉴 숨김
       allTwoD.forEach(function (twoD) {
-        twoD.style.display = "none";
+        twoD.classList.remove("show");
+        setTimeout(function () {
+          twoD.style.display = "none";
+        }, 600); // 애니메이션 완료 후 숨김
       });
 
       // infoD 요소도 즉시 숨김
@@ -236,6 +245,48 @@ document.addEventListener("DOMContentLoaded", function () {
     // 마우스휠 제어
     mousewheel: {
       enabled: true,
+    },
+
+    // 슬라이드 변경 이벤트
+    on: {
+      slideChangeTransitionStart: function () {
+        // 모든 텍스트 아래로 숨기기
+        const allTxtElements = document.querySelectorAll(".swiper-slide .txt1");
+        allTxtElements.forEach((txt) => {
+          txt.style.opacity = "0";
+          txt.style.transform = "translateY(20px)";
+          txt.style.transition = "all 0.25s ease-in";
+        });
+      },
+      slideChangeTransitionEnd: function () {
+        // 활성 슬라이드의 텍스트만 아래에서 위로 표시
+        const activeSlide = document.querySelector(".swiper-slide-active");
+        if (activeSlide) {
+          const activeTxt = activeSlide.querySelector(".txt1");
+          if (activeTxt) {
+            setTimeout(() => {
+              activeTxt.style.opacity = "1";
+              activeTxt.style.transform = "translateY(0)";
+              activeTxt.style.transition =
+                "all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+            }, 200);
+          }
+        }
+      },
+      init: function () {
+        // 초기 로드 시 첫 번째 슬라이드 텍스트를 아래에서 위로 표시
+        setTimeout(() => {
+          const firstActiveTxt = document.querySelector(
+            ".swiper-slide-active .txt1"
+          );
+          if (firstActiveTxt) {
+            firstActiveTxt.style.opacity = "1";
+            firstActiveTxt.style.transform = "translateY(0)";
+            firstActiveTxt.style.transition =
+              "all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+          }
+        }, 300);
+      },
     },
   });
 
