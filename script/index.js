@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 마우스휠 제어
     mousewheel: {
-      enabled: true,
+      enabled: false,
     },
 
     // 슬라이드 변경 이벤트
