@@ -311,4 +311,73 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // 뉴스 리스트 순환 애니메이션
+  const newsLists = document.querySelectorAll(".rightA .list");
+  let currentIdx = 0;
+
+  function showListUp(nextIdx) {
+    if (currentIdx === nextIdx) return;
+    newsLists[currentIdx].classList.remove("active", "down");
+    newsLists[currentIdx].classList.add("up");
+    newsLists[nextIdx].classList.remove("active", "up", "down");
+    newsLists[nextIdx].classList.add("down");
+    newsLists[nextIdx].style.display = "flex";
+    setTimeout(() => {
+      newsLists[nextIdx].classList.remove("down");
+      newsLists[nextIdx].classList.add("active");
+      newsLists[currentIdx].classList.remove("up");
+      newsLists[currentIdx].style.display = "none";
+      currentIdx = nextIdx;
+    }, 400);
+  }
+
+  function showListDown(prevIdx) {
+    if (currentIdx === prevIdx) return;
+    newsLists[currentIdx].classList.remove("active", "up");
+    newsLists[currentIdx].classList.add("down");
+    newsLists[prevIdx].classList.remove("active", "up", "down");
+    newsLists[prevIdx].classList.add("up");
+    newsLists[prevIdx].style.display = "flex";
+    setTimeout(() => {
+      newsLists[prevIdx].classList.remove("up");
+      newsLists[prevIdx].classList.add("active");
+      newsLists[currentIdx].classList.remove("down");
+      newsLists[currentIdx].style.display = "none";
+      currentIdx = prevIdx;
+    }, 400);
+  }
+
+  // 초기화: 첫 번째 리스트만 보이게
+  newsLists.forEach((el, i) => {
+    if (i === 0) {
+      el.classList.add("active");
+      el.style.display = "flex";
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    } else {
+      el.classList.remove("active", "up", "down");
+      el.style.display = "none";
+      el.style.opacity = "0";
+      el.style.transform = "translateY(40px)";
+    }
+  });
+
+  const btnUp = document.querySelector(".btnA a:first-child");
+  const btnDown = document.querySelector(".btnA a:last-child");
+
+  if (btnUp && btnDown) {
+    btnUp.style.pointerEvents = "auto";
+    btnDown.style.pointerEvents = "auto";
+    btnUp.addEventListener("click", function (e) {
+      e.preventDefault();
+      let nextIdx = (currentIdx + 1) % newsLists.length;
+      showListUp(nextIdx);
+    });
+    btnDown.addEventListener("click", function (e) {
+      e.preventDefault();
+      let prevIdx = (currentIdx - 1 + newsLists.length) % newsLists.length;
+      showListDown(prevIdx);
+    });
+  }
 });

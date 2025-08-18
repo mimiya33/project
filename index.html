@@ -1,3 +1,36 @@
+<script>
+// 뉴스 리스트 순환 애니메이션
+(function() {
+  const lists = document.querySelectorAll('.rightA .list');
+  let current = 0;
+  function showList(next, direction) {
+    if (next === current) return;
+    lists[current].classList.remove('active');
+    lists[current].classList.add(direction);
+    lists[next].classList.add('active', direction);
+    setTimeout(() => {
+      lists[current].classList.remove('up', 'down');
+      lists[next].classList.remove('up', 'down');
+      current = next;
+    }, 400);
+  }
+  document.querySelector('.btnA a:first-child').addEventListener('click', function(e) {
+    e.preventDefault();
+    let next = (current + 1) % lists.length;
+    showList(next, 'up');
+  });
+  document.querySelector('.btnA a:last-child').addEventListener('click', function(e) {
+    e.preventDefault();
+    let next = (current - 1 + lists.length) % lists.length;
+    showList(next, 'down');
+  });
+  // 초기 상태
+  lists.forEach((el, i) => {
+    el.classList.remove('active', 'up', 'down');
+    if (i === 0) el.classList.add('active');
+  });
+})();
+</script>
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -327,7 +360,6 @@
             </div>
           </div>
         </div>
-
         <div class="section2 centerArea">
           <div class="fixArea">
             <p class="title">Brand</p>
