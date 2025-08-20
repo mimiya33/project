@@ -164,41 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.overflow = ""; // 스크롤 복원
       }
     });
-
-    // 검색 실행 (Enter 키 또는 검색 버튼)
-    const searchSubmitBtn = document.querySelector(".searchPop .btn");
-
-    function performSearch() {
-      const searchTerm = searchInput.value.trim();
-      if (searchTerm) {
-        console.log("검색어:", searchTerm);
-        // 여기에 실제 검색 로직을 추가할 수 있습니다
-        alert(`"${searchTerm}"에 대한 검색을 실행합니다.`);
-        searchPop.classList.remove("show");
-        document.body.style.overflow = ""; // 스크롤 복원
-      } else {
-        alert("검색어를 입력해주세요.");
-        searchInput.focus();
-      }
-    }
-
-    // Enter 키로 검색
-    if (searchInput) {
-      searchInput.addEventListener("keydown", function (e) {
-        if (e.key === "Enter") {
-          e.preventDefault();
-          performSearch();
-        }
-      });
-    }
-
-    // 검색 버튼으로 검색
-    if (searchSubmitBtn) {
-      searchSubmitBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        performSearch();
-      });
-    }
   }
 
   // Swiper 초기화
@@ -318,50 +283,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function showListUp(nextIdx) {
     if (currentIdx === nextIdx) return;
-    newsLists[currentIdx].classList.remove("active", "down");
-    newsLists[currentIdx].classList.add("up");
-    newsLists[nextIdx].classList.remove("active", "up", "down");
-    newsLists[nextIdx].classList.add("down");
+    newsLists.forEach((el, i) => {
+      el.classList.remove("active", "up", "down");
+      el.style.display = "none";
+    });
+    newsLists[currentIdx].classList.add("down");
+    newsLists[nextIdx].classList.add("up");
+    newsLists[currentIdx].style.display = "flex";
     newsLists[nextIdx].style.display = "flex";
+    // 동시에 애니메이션 시작, 280ms 후 상태 정리
     setTimeout(() => {
-      newsLists[nextIdx].classList.remove("down");
+      newsLists[nextIdx].classList.remove("up");
       newsLists[nextIdx].classList.add("active");
-      newsLists[currentIdx].classList.remove("up");
+      newsLists[currentIdx].classList.remove("down");
       newsLists[currentIdx].style.display = "none";
       currentIdx = nextIdx;
-    }, 400);
+    }, 280);
   }
 
   function showListDown(prevIdx) {
     if (currentIdx === prevIdx) return;
-    newsLists[currentIdx].classList.remove("active", "up");
-    newsLists[currentIdx].classList.add("down");
-    newsLists[prevIdx].classList.remove("active", "up", "down");
-    newsLists[prevIdx].classList.add("up");
+    newsLists.forEach((el, i) => {
+      el.classList.remove("active", "up", "down");
+      el.style.display = "none";
+    });
+    newsLists[currentIdx].classList.add("up");
+    newsLists[prevIdx].classList.add("down");
+    newsLists[currentIdx].style.display = "flex";
     newsLists[prevIdx].style.display = "flex";
+    // 동시에 애니메이션 시작, 280ms 후 상태 정리
     setTimeout(() => {
-      newsLists[prevIdx].classList.remove("up");
+      newsLists[prevIdx].classList.remove("down");
       newsLists[prevIdx].classList.add("active");
-      newsLists[currentIdx].classList.remove("down");
+      newsLists[currentIdx].classList.remove("up");
       newsLists[currentIdx].style.display = "none";
       currentIdx = prevIdx;
-    }, 400);
+    }, 280);
   }
 
   // 초기화: 첫 번째 리스트만 보이게
-  newsLists.forEach((el, i) => {
-    if (i === 0) {
-      el.classList.add("active");
-      el.style.display = "flex";
-      el.style.opacity = "1";
-      el.style.transform = "translateY(0)";
-    } else {
+  function showFirstNewsList() {
+    currentIdx = 0;
+    newsLists.forEach((el, i) => {
       el.classList.remove("active", "up", "down");
-      el.style.display = "none";
-      el.style.opacity = "0";
-      el.style.transform = "translateY(40px)";
-    }
-  });
+      el.style.display = i === 0 ? "flex" : "none";
+      if (i === 0) el.classList.add("active");
+    });
+  }
+  showFirstNewsList();
 
   const btnUp = document.querySelector(".btnA a:first-child");
   const btnDown = document.querySelector(".btnA a:last-child");
@@ -371,13 +340,13 @@ document.addEventListener("DOMContentLoaded", function () {
     btnDown.style.pointerEvents = "auto";
     btnUp.addEventListener("click", function (e) {
       e.preventDefault();
-      let nextIdx = (currentIdx + 1) % newsLists.length;
-      showListUp(nextIdx);
+      let prevIdx = (currentIdx - 1 + newsLists.length) % newsLists.length;
+      showListDown(prevIdx);
     });
     btnDown.addEventListener("click", function (e) {
       e.preventDefault();
-      let prevIdx = (currentIdx - 1 + newsLists.length) % newsLists.length;
-      showListDown(prevIdx);
+      let nextIdx = (currentIdx + 1) % newsLists.length;
+      showListUp(nextIdx);
     });
   }
 });
