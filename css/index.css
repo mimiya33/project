@@ -1032,7 +1032,7 @@ ul, li {
 }
 
 .listDiv .list:nth-child(1){
-    background: url('../images/list_bg1.jpg') no-repeat center center;
+    background: url('/images/list_bg1.jpg') no-repeat center center;
     background-size: cover;
     top: 0px;
     opacity: 1;
@@ -1075,18 +1075,18 @@ ul, li {
 }
 
 .listDiv .list:nth-child(2) {
-    background: url('../images/list_bg2.jpg') no-repeat center center;
+    background: url('/images/list_bg2.jpg') no-repeat center center;
     background-size: cover;
     top: 100px;
 }
 
 .listDiv .list:nth-child(3) {
-    background: url('../images/list_bg3.jpg') no-repeat center center;
+    background: url('/images/list_bg3.jpg') no-repeat center center;
     background-size: cover;
     top: 40px;
 }
 .listDiv .list:nth-child(4) {
-    background: url('../images/list_bg4.jpg') no-repeat center center;
+    background: url('/images/list_bg4.jpg') no-repeat center center;
     background-size: cover;
     top: 140px;
 }
@@ -1105,9 +1105,7 @@ ul, li {
     position: relative;
     border-top: 1px solid #ddd;
 }
-.newsD {
 
-} 
 .newsD, .newsList {
     width: 1024px;
     height: 80px;
