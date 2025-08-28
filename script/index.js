@@ -1,3 +1,18 @@
+let lastScroll = 0;
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", function () {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll) {
+    // 아래로 스크롤: 헤더 전체 숨김
+    header.classList.add("hide");
+  } else {
+    // 위로 스크롤: 헤더 전체 보임
+    header.classList.remove("hide");
+  }
+  lastScroll = currentScroll;
+});
+
 // 바닐라 JavaScript로 메뉴 드롭다운 구현
 document.addEventListener("DOMContentLoaded", function () {
   const gnb = document.getElementById("gnb");
@@ -183,7 +198,12 @@ document.addEventListener("DOMContentLoaded", function () {
       el: ".swiper-pagination",
       clickable: true,
       renderBullet: function (index, className) {
-        return '<span class="' + className + '"></span>';
+        // 슬라이드 개수(7개)까지만 불릿 생성
+        if (index < 7) {
+          return '<span class="' + className + '"></span>';
+        } else {
+          return "";
+        }
       },
     },
 
@@ -223,6 +243,18 @@ document.addEventListener("DOMContentLoaded", function () {
           txt.style.transition = "all 0.25s ease-in";
         });
       },
+      slideChange: function () {
+        // loop 상태에서도 항상 올바른 불릿에 active 적용
+        const realIndex = this.realIndex % 7;
+        const bullets = document.querySelectorAll(".swiper-pagination-bullet");
+        bullets.forEach((b, i) => {
+          if (i === realIndex) {
+            b.classList.add("swiper-pagination-bullet-active");
+          } else {
+            b.classList.remove("swiper-pagination-bullet-active");
+          }
+        });
+      },
       slideChangeTransitionEnd: function () {
         // 활성 슬라이드의 텍스트만 아래에서 위로 표시
         const activeSlide = document.querySelector(".swiper-slide-active");
@@ -237,6 +269,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }, 200);
           }
         }
+        // 페이지네이션 불릿 활성화 직접 제어 (loop 대응)
+        const realIndex = this.realIndex % 7;
+        const bullets = document.querySelectorAll(".swiper-pagination-bullet");
+        bullets.forEach((b, i) => {
+          if (i === realIndex) {
+            b.classList.add("swiper-pagination-bullet-active");
+          } else {
+            b.classList.remove("swiper-pagination-bullet-active");
+          }
+        });
       },
       init: function () {
         // 초기 로드 시 첫 번째 슬라이드 텍스트를 아래에서 위로 표시
@@ -251,6 +293,21 @@ document.addEventListener("DOMContentLoaded", function () {
               "all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
           }
         }, 300);
+        // 페이지네이션 불릿 활성화 직접 제어 (loop 대응)
+        const swiper = this;
+        setTimeout(() => {
+          const realIndex = swiper.realIndex % 7;
+          const bullets = document.querySelectorAll(
+            ".swiper-pagination-bullet"
+          );
+          bullets.forEach((b, i) => {
+            if (i === realIndex) {
+              b.classList.add("swiper-pagination-bullet-active");
+            } else {
+              b.classList.remove("swiper-pagination-bullet-active");
+            }
+          });
+        }, 10);
       },
     },
   });
