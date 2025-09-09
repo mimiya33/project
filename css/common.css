@@ -1,5 +1,4 @@
-@import url('https://meyerweb.com/eric/tools/css/reset/reset200802.css');
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+/* Using system fonts instead of external CDN fonts */
 
 :root {
     /* 색상의 가중치가 다름 */  
@@ -47,7 +46,7 @@ html {
 }
 
 body {
-  font-family: 'Pretendard Variable', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.75;
   color: var(--gray90, #252525);
 }
