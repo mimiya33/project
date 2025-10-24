@@ -6,6 +6,7 @@ recruitSlider();
 gnb();
 newsSlider();
 brandSlider();
+initSearchPop();
 /**
  * 함수선언
  **/
@@ -266,7 +267,7 @@ function brandSlider() {
       },
     },
     on: {
-      init: function() {
+      init: function () {
         setTimeout(() => {
           const firstBullet = document.querySelector('.tabAreaD .brand');
           if (firstBullet) {
@@ -276,4 +277,61 @@ function brandSlider() {
       }
     }
   });
+}
+
+// 검색 팝업 기능
+function initSearchPop() {
+  const searchPop = document.querySelector(".searchPop");
+  const searchBtn = document.querySelector(".sch");
+  const closeBtn = document.querySelector(".searchPop .closeBtn");
+  const searchInput = document.querySelector(".searchPop input[name='searchKey']");
+
+  console.log("Search elements:", { searchPop, searchBtn, closeBtn, searchInput });
+
+  if (searchBtn && searchPop) {
+    // 검색 버튼 클릭 시 팝업 열기
+    searchBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("검색 팝업 열기");
+      searchPop.classList.add("show");
+      document.body.style.overflow = "hidden";
+
+      // 입력 필드에 포커스
+      setTimeout(() => {
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }, 300);
+    });
+
+    // 닫기 버튼 클릭 시 팝업 닫기
+    if (closeBtn) {
+      closeBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log("검색 팝업 닫기");
+        searchPop.classList.remove("show");
+        document.body.style.overflow = "";
+      });
+    }
+
+    // 배경 클릭 시 팝업 닫기
+    searchPop.addEventListener("click", function (e) {
+      if (e.target === searchPop) {
+        console.log("배경 클릭으로 검색 팝업 닫기");
+        searchPop.classList.remove("show");
+        document.body.style.overflow = "";
+      }
+    });
+
+    // ESC 키로 팝업 닫기
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && searchPop.classList.contains("show")) {
+        console.log("ESC 키로 검색 팝업 닫기");
+        searchPop.classList.remove("show");
+        document.body.style.overflow = "";
+      }
+    });
+  } else {
+    console.error("검색 요소를 찾을 수 없습니다:", { searchBtn, searchPop });
+  }
 }
