@@ -7,6 +7,7 @@ gnb();
 newsSlider();
 brandSlider();
 initSearchPop();
+initExternalLinks();
 /**
  * 함수선언
  **/
@@ -333,6 +334,76 @@ function initSearchPop() {
     });
   } else {
     console.error("검색 요소를 찾을 수 없습니다:", { searchBtn, searchPop });
+  }
+}
+
+// 외부 링크 강제 처리 함수
+function initExternalLinks() {
+  console.log("외부 링크 초기화 시작");
+
+  // 모든 외부 링크 요소 찾기
+  const langLink = document.querySelector(".lang");
+  const mallLink = document.querySelector(".mall");
+
+  console.log("링크 요소들:", { langLink, mallLink });
+
+  // ENG 링크 처리
+  if (langLink) {
+    // 기존 이벤트 제거 후 새로운 이벤트 추가
+    langLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const url = this.getAttribute('data-url') || this.href;
+      console.log("ENG 링크 클릭 - URL:", url);
+
+      try {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (!newWindow) {
+          console.error("팝업이 차단되었습니다. 브라우저 설정을 확인하세요.");
+          alert("팝업이 차단되었습니다. 브라우저 설정에서 팝업을 허용해주세요.");
+        } else {
+          console.log("새 창에서 열기 성공");
+        }
+      } catch (error) {
+        console.error("링크 열기 오류:", error);
+        // 대안: 현재 탭에서 열기
+        window.location.href = url;
+      }
+    });
+
+    // CSS로 링크가 차단되지 않도록 강제 설정
+    langLink.style.pointerEvents = 'auto';
+    langLink.style.cursor = 'pointer';
+  }
+
+  // 칠성몰 링크 처리
+  if (mallLink) {
+    mallLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const url = this.getAttribute('data-url') || this.href;
+      console.log("칠성몰 링크 클릭 - URL:", url);
+
+      try {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+        if (!newWindow) {
+          console.error("팝업이 차단되었습니다. 브라우저 설정을 확인하세요.");
+          alert("팝업이 차단되었습니다. 브라우저 설정에서 팝업을 허용해주세요.");
+        } else {
+          console.log("새 창에서 열기 성공");
+        }
+      } catch (error) {
+        console.error("링크 열기 오류:", error);
+        // 대안: 현재 탭에서 열기
+        window.location.href = url;
+      }
+    });
+
+    // CSS로 링크가 차단되지 않도록 강제 설정
+    mallLink.style.pointerEvents = 'auto';
+    mallLink.style.cursor = 'pointer';
   }
 }
 
