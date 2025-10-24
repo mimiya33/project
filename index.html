@@ -1,438 +1,529 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="브랜드 이미지와 사용자 경험을 향상시키기 위해 롯데칠성음료 기업 웹사이트를 리디자인한 퍼블리싱 프로젝트입니다. 직관적인 UI와 반응형 구조를 구현했습니다."
-    />
-    <meta
-      name="keywords"
-      content="롯데칠성음료, 웹 리디자인, 퍼블리싱 포트폴리오, 반응형 웹, UIUX, 웹디자인, HTML, CSS, 웹 퍼블리셔, 기업 웹사이트 리디자인"
-    />
-    <meta name="author" content="배미례" />
-    <meta property="og:title" content="롯데칠성음료 리디자인 프로젝트" />
-    <!-- 깃허브 url넣어라. -->
-    <meta property="og:url" content="깃허브" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/logo.png" />
-    <!-- og_card 이미지도 넣어라. -->
-    <meta property="og:site_name" content="롯데칠성음료 리디자인 프로젝트" />
-    <meta
-      property="og:description"
-      content="브랜드 이미지와 사용자 경험을 향상시키기 위해 롯데칠성음료 기업 웹사이트를 리디자인한 퍼블리싱 프로젝트입니다. 직관적인 UI와 반응형 구조를 구현했습니다."
-    />
-    <title>롯데칠성음료리디자인</title>
-    <link rel="shortcut icon" href="images/favicon.png" />
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
 
-  <body>
-    <div id="wrap">
-      <header id="header">
-        <div class="header_inner">
-          <!-- dep_1 -->
-          <div class="all_wrap df">
-            <h2>
-              <a href="https://company.lottechilsung.co.kr/" class="logo">
-                <img src="images/logo.png" alt="롯데칠성음료로고" />
-              </a>
-            </h2>
-            <!-- //logo -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="브랜드 이미지와 사용자 경험을 향상시키기 위해 롯데칠성음료 기업 웹사이트를 리디자인한 퍼블리싱 프로젝트입니다. 직관적인 UI와 반응형 구조를 구현했습니다." />
+  <meta name="keywords" content="롯데칠성음료, 웹 리디자인, 퍼블리싱 포트폴리오, 반응형 웹, UIUX, 웹디자인, HTML, CSS, 웹 퍼블리셔, 기업 웹사이트 리디자인" />
+  <meta name="author" content="배미례" />
+  <meta property="og:title" content="롯데칠성음료 리디자인 프로젝트" />
+  <!-- 깃허브 url넣어라. -->
+  <meta property="og:url" content="깃허브" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/logo.png" />
+  <!-- og_card 이미지도 넣어라. -->
+  <meta property="og:site_name" content="롯데칠성음료 리디자인 프로젝트" />
+  <meta property="og:description"
+    content="브랜드 이미지와 사용자 경험을 향상시키기 위해 롯데칠성음료 기업 웹사이트를 리디자인한 퍼블리싱 프로젝트입니다. 직관적인 UI와 반응형 구조를 구현했습니다." />
+  <title>롯데칠성음료리디자인</title>
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
 
-            <!-- <a href="javascript:" class="mGnb">
-        <img src="images/mGnb_btn.png" alt="전체메뉴열기">
-      </a> -->
-
-            <ul id="gnb">
-              <li class="dep">
-                <a href="#" class="oneD">기업소개</a>
-                <ul class="twoD inner">
-                  <li><a href="#">롯데칠성음료</a></li>
-                  <li><a href="#">연혁</a></li>
-                  <li><a href="#">수상 및 인증</a></li>
-                  <li><a href="#">세계속의 롯데칠성</a></li>
-                  <li><a href="#">사업장 현황</a></li>
-                  <li><a href="#">오시는 길</a></li>
-                  <li><a href="#">공지사항</a></li>
-                </ul>
-              </li>
-              <li class="dep">
-                <a href="#" class="oneD">제품홍보</a>
-                <ul class="twoD">
-                  <li><a href="#">신제품</a></li>
-                  <li><a href="#">대표 브랜드</a></li>
-                  <li><a href="#">전체 제품 보기</a></li>
-                  <li><a href="#">CF 스토리</a></li>
-                  <li><a href="#">뉴스룸</a></li>
-                </ul>
-              </li>
-              <li class="dep">
-                <a href="#" class="oneD">투자정보</a>
-                <ul class="twoD">
-                  <li><a href="#">주가정보</a></li>
-                  <li><a href="#">재무정보</a></li>
-                  <li><a href="#">공시정보</a></li>
-                  <li><a href="#">IR자료실</a></li>
-                </ul>
-              </li>
-              <li class="dep">
-                <a href="#" class="oneD">가치경영</a>
-                <ul class="twoD">
-                  <li><a href="#">ESG경영전략</a></li>
-                  <li><a href="#">품질환경경영</a></li>
-                  <li><a href="#">윤리경영</a></li>
-                  <li><a href="#">사회공헌</a></li>
-                  <li><a href="#">공정거래</a></li>
-                  <li><a href="#">동반성장</a></li>
-                  <li><a href="#">기업지배구조</a></li>
-                </ul>
-              </li>
-              <li class="dep">
-                <a href="#" class="oneD">인재채용</a>
-                <ul class="twoD">
-                  <li><a href="#">인재상/인권경영</a></li>
-                  <li><a href="#">인사/교육제도</a></li>
-                  <li><a href="#">복리후생/안전건강</a></li>
-                  <li><a href="#">직무소개</a></li>
-                  <li><a href="#">선배들의 이야기</a></li>
-                  <li><a href="#">아이디어 제안</a></li>
-                </ul>
-              </li>
-              <li class="dep">
-                <a href="#" class="oneD">고객센터</a>
-                <ul class="twoD">
-                  <li><a href="#">고객상담</a></li>
-                  <li><a href="#">재품공급문의</a></li>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">개인정보처리방침</a></li>
-                </ul>
-              </li>
-              <li class="infoD">
-                <div class="stockD">
-                  <p class="tit">롯데칠성음료 보통주</p>
-                  <div class="ovF">
-                    <p class="s1">130,300</p>
-                    <p class="s2 up">
-                      <span class="hiddenTxt">상승</span>
-                      300(+0.23 %)
-                    </p>
-                  </div>
-                  <a
-                    href="https://company.lottechilsung.co.kr/kor/invest/stockinfo/list.do"
-                    class="bt"
-                    >주가정보 바로가기</a
-                  >
-                </div>
-                <div class="recruitD">
-                  <p class="tit">
-                    <span>적극적이고</span>
-                    <br />
-                    <span>노력하는 인재</span>를
-                    <br />
-                    기다립니다.
+<body>
+  <div id="wrap">
+    <header id="header">
+      <div class="header_inner">
+        <!-- dep_1 -->
+        <div class="all_wrap df">
+          <h2>
+            <!-- 깃개정 칠성몰 주소 넣기 -->
+            <a href="#" class="logo">
+              <img src="images/logo.png" alt="롯데칠성음료로고" />
+            </a>
+          </h2>
+          <ul id="gnb">
+            <li class="dep">
+              <a href="#" class="oneD">기업소개</a>
+              <ul class="twoD inner">
+                <li><a href="#">롯데칠성음료</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">수상 및 인증</a></li>
+                <li><a href="#">세계속의 롯데칠성</a></li>
+                <li><a href="#">사업장 현황</a></li>
+                <li><a href="#">오시는 길</a></li>
+                <li><a href="#">공지사항</a></li>
+              </ul>
+            </li>
+            <li class="dep">
+              <a href="#" class="oneD">제품홍보</a>
+              <ul class="twoD">
+                <li><a href="#">신제품</a></li>
+                <li><a href="#">대표 브랜드</a></li>
+                <li><a href="#">전체 제품 보기</a></li>
+                <li><a href="#">CF 스토리</a></li>
+                <li><a href="#">뉴스룸</a></li>
+              </ul>
+            </li>
+            <li class="dep">
+              <a href="#" class="oneD">투자정보</a>
+              <ul class="twoD">
+                <li><a href="#">주가정보</a></li>
+                <li><a href="#">재무정보</a></li>
+                <li><a href="#">공시정보</a></li>
+                <li><a href="#">IR자료실</a></li>
+              </ul>
+            </li>
+            <li class="dep">
+              <a href="#" class="oneD">가치경영</a>
+              <ul class="twoD">
+                <li><a href="#">ESG경영전략</a></li>
+                <li><a href="#">품질환경경영</a></li>
+                <li><a href="#">윤리경영</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">공정거래</a></li>
+                <li><a href="#">동반성장</a></li>
+                <li><a href="#">기업지배구조</a></li>
+              </ul>
+            </li>
+            <li class="dep">
+              <a href="#" class="oneD">인재채용</a>
+              <ul class="twoD">
+                <li><a href="#">인재상/인권경영</a></li>
+                <li><a href="#">인사/교육제도</a></li>
+                <li><a href="#">복리후생/안전건강</a></li>
+                <li><a href="#">직무소개</a></li>
+                <li><a href="#">선배들의 이야기</a></li>
+                <li><a href="#">아이디어 제안</a></li>
+              </ul>
+            </li>
+            <li class="dep">
+              <a href="#" class="oneD">고객센터</a>
+              <ul class="twoD">
+                <li><a href="#">고객상담</a></li>
+                <li><a href="#">재품공급문의</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+              </ul>
+            </li>
+            <li class="infoD">
+              <div class="stockD">
+                <p class="tit">롯데칠성음료 보통주</p>
+                <div class="ovF">
+                  <p class="s1">130,300</p>
+                  <p class="s2 up">
+                    <span class="hiddenTxt">상승</span> 300(+0.23 %)
                   </p>
-                  <a
-                    href="https://company.lottechilsung.co.kr/kor/recruit/OlderStory/list.do"
-                    class="bt"
-                    >선배들의 이야기
-                    <br />
-                    바로가기
-                  </a>
                 </div>
-              </li>
-            </ul>
-            <!-- //gnb-->
-            <div class="utill">
-              <a href="#" class="sch">
-                <img src="images/search.svg" alt="탐색기" />
-              </a>
-              <a
-                href="https://company.lottechilsung.co.kr/eng/main/index.do"
-                class="lang"
-                >ENG</a
-              >
-              <a href="https://mall.lottechilsung.co.kr/" class="mall">
-                <img
-                  src="https://company.lottechilsung.co.kr/common/images/logo_chill_mall.png"
-                  alt="칠성몰 바로가기"
-                />
-              </a>
-            </div>
-            <!-- //util -->
-          </div>
-        </div>
-      </header>
-      <!-- //header -->
-      <div class="searchPop">
-        <div class="innerArea">
-          <div class="inputArea">
-            <input
-              type="text"
-              name="searchKey"
-              placeholder="검색어를 입력해주세요"
-              title="검색어 입력"
-            />
-            <a href="javascript:" class="btn">
-              <img src="images/searchPop_searchBtn.png" alt="검색" />
+                <a href="#" class="bt">주가정보 바로가기</a>
+              </div>
+              <div class="recruitD">
+                <p class="tit">
+                  <span>적극적이고</span>
+                  <br />
+                  <span>노력하는 인재</span>를 <br /> 기다립니다.
+                </p>
+                <a href="#" class="bt">선배들의 이야기 <br /> 바로가기 </a>
+              </div>
+            </li>
+          </ul>
+          <!-- //gnb-->
+          <div class="utill">
+            <a href="#" class="sch">
+              <img src="images/search.svg" alt="탐색기" />
+            </a>
+            <a href="#" class="lang">ENG</a>
+            <a href="#" class="mall">
+              <img src="images/logo_chill_mall.png" alt="칠성몰 바로가기" />
             </a>
           </div>
-          <a href="javascript:" class="closeBtn">닫기</a>
+          <!-- //util -->
         </div>
       </div>
-      <!-- //searchPop -->
-      <!-- Swiper -->
-      <div class="swiper swiper-container">
-        <!-- <div
-        class="mainVisual swiper-container subBody swiper-container-horizontal"
-        tabindex="-1"
-      > -->
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/slide1_chil2.png" alt="칠성사이다" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/slide2_can2.png" alt="칸타타" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/slide3_sae2.png" alt="새로" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/silde4_kru2.png" alt="크러시" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/slide5_han2.jpg" alt="윤리경영" />
-            <div class="txtArea">
-              <p class="txt1">
-                언제 어디서나, 모든 순간<br />
-                고객의 곁에서 함께합니다.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/slide6_fall2.jpg" alt="품질환경경영" />
-            <div class="txtArea">
-              <p class="txt1">
-                맑고 깨끗한 제품으로,<br />
-                건강한 생태계 환경을 만듭니다.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/slide7_dev2.jpg" alt="혁신과변화" />
-            <div class="txtArea">
-              <p class="txt1">
-                끊임없는 혁신과 변화를 통해,<br />
-                더 큰 미래를 향해 나아갑니다.
-              </p>
-            </div>
-          </div>
+    </header>
+    <!-- //header -->
+    <div class="searchPop">
+      <div class="innerArea">
+        <div class="inputArea">
+          <input type="text" name="searchKey" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+          <a href="javascript:" class="btn">
+            <img src="images/searchPop_searchBtn.png" alt="검색" />
+          </a>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-controls">
-          <div class="swiper-pagination"></div>
-          <button class="playBtn" type="button" aria-label="자동재생 제어">
-            <span class="sr-only">재생/정지</span>
-          </button>
-        </div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <span class="scrollTxt"> SCROLL DOWN </span>
-        <span class="swiper-notification"></span>
+        <a href="javascript:" class="closeBtn">닫기</a>
       </div>
-      <!-- //swiper -->
-      <main id="section">
-        <div class="section1 centerArea">
-          <div class="fixArea">
-            <p class="title">Company</p>
-            <p class="text">
-              대한민국 대표 음료 기업, 롯데칠성음료를 소개합니다.
-            </p>
-          </div>
-          <div class="content">
-            <div class="listDiv">
-              <div class="list">
-                <p class="type">매출액(2024.12 기준)</p>
-                <p class="con">
-                  <span>4.02</span>
-                  조원
-                </p>
-              </div>
-              <div class="list">
-                <p class="type">국내 음료 업계(닐슨인덱스 기준)</p>
-                <p class="con">
-                  <span>1</span>
-                  위
-                </p>
-              </div>
-              <div class="list">
-                <p class="type">국가고객만족지수 1위 (음료 부문)</p>
-                <p class="con">
-                  <span>12</span>
-                  년 연속
-                </p>
-              </div>
-              <div class="list">
-                <p class="type">해외수출</p>
-                <p class="con">
-                  <span>70</span>
-                  여개 나라
-                </p>
-              </div>
-            </div>
-            <div class="chillNews">
-              <div class="newsD">
-                <div class="leftA">
-                  <p class="tit">롯데 칠성 소식</p>
-                </div>
-                <div class="btnA">
-                  <a href="javascript:" title="이전" alt="이전"></a>
-                  <a href="javascript:" title="다음" alt="다음"></a>
-                </div>
-                <div id="newsList" class="rightA">
-                  <div class="list">
-                    <a
-                      href="/kor/company/news/view.do?detailsKey=1537"
-                      class="txt"
-                      >세상의 모든 술이 다시 태어나다! 제대로 만든 토닉워터!
-                      새롭게 단장한 ...</a
-                    >
-                  </div>
-                  <div class="list">
-                    <a
-                      href="/kor/company/news/view.do?detailsKey=1536"
-                      class="txt"
-                      >경포해수욕장에서 만나는 새로워진 처음처럼!</a
-                    >
-                  </div>
-                  <div class="list">
-                    <a
-                      href="/kor/company/news/view.do?detailsKey=1535"
-                      class="txt"
-                      >제로 칼로리로 더욱 가볍고 상쾌하게! 롯데칠성음료, 출시
-                      30년만에 ‘...</a
-                    >
-                  </div>
-                </div>
-                <div class="endA">
-                  <a href="/kor/company/news/list.do">소식 더보기</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- ///////////////////section1 -->
-        <div class="section2 centerArea">
-          <div class="fixArea">
-            <p class="title">Brand</p>
-            <p class="text">
-              반세기 동안 축적해온 노하우를 바탕으로 우수한 품질의 제품을
-              만듭니다.
-            </p>
-            <div class="bgDiv">
-              <video id="video" autoplay loop muted>
-                <source src="video/section2_two_bg.mp4" type="video/mp4" />
-              </video>
-              <p class="bg"></p>
-            </div>
-            <div class="content">
-              <div class="tabConDiv">
-                <div class="tabConcent">
-                  <div class="box">
-                    <p class="tit">맑고 깨끗한</p>
-                    <p class="name">칠성사이다</p>
-                    <p class="txt">
-                      칠성사이다는 반세기 이상의 역사를 지닌<br />대한민국 No.1
-                      오리지널 탄산음료입니다.
-                    </p>
-                    <div class="btnA">
-                      <a
-                        href="https://company.lottechilsung.co.kr/kor/brand/chilsungcider/contentsid/613/index.do"
-                        >브랜드 소개</a
-                      >
-                      <a
-                        href="https://mall.lottechilsung.co.kr/products?categoryNo=843920&depth=3"
-                        target="_blank"
-                        >제품 구매하기</a
-                      >
-                    </div>
-                    <p class="img img1">
-                      <img src="images/mainCon_two_tab1_img1.png" alt="" />
-                    </p>
-                    <p class="img img2">
-                      <img src="images/mainCon_two_tab1_img2.png" alt="" />
-                    </p>
-                    <p class="img img3">
-                      <img src="images/mainCon_two_tab1_img3.png" alt="" />
-                    </p>
-                  </div>
-                </div>
-                <!-- tabContent 여러개 들어가야 함. -->
-              </div>
-              <div class="tabAreaD">
-                <div class="tabs">
-                  <p class="dot"></p>
-                  <div
-                    class="leftD swiper-container swiper-container-horizontal"
-                  >
-                    <div class="swiper-wrapper">
-                      <a
-                        href="javascript:"
-                        class="swiper-slide swiper-slide-active"
-                        >칠성사이다</a
-                      >
-                      <a
-                        href="javascript:"
-                        class="swiper-slideswiper-slide-next"
-                        >펩시콜라</a
-                      >
-                      <a href="javascript:" class="swiper-slide"> 델몬트 </a>
-                      <a href="javascript:" class="swiper-slide"> 밀키스 </a>
-                      <a href="javascript:" class="swiper-slide"> 칸타타 </a>
-                      <a href="javascript:" class="swiper-slide"> 핫식스 </a>
-                      <a href="javascript:" class="swiper-slide"> 아이시스 </a>
-                      <a href="javascript:" class="swiper-slide"> 레쓰비 </a>
-                      <a href="javascript:" class="swiper-slide"> 처음처럼 </a>
-                      <a href="javascript:" class="swiper-slide"> 새로 </a>
-                      <a href="javascript:" class="swiper-slide"> 클라우드 </a>
-                      <a href="javascript:" class="swiper-slide"> 크러시 </a>
-                    </div>
-                    <span class="swiper-notification"></span>
-                    <a
-                      href="https://company.lottechilsung.co.kr/kor/product/beverage/contentsid/597/index.do"
-                      class="brandView"
-                      >대표 브랜드 보기</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="section3 centerArea">
-          <div class="fixArea">
-            <p class="title">Recruit</p>
-            <p class="txt2">
-              사랑, 자유, 그리고 풍요로운 삶을 함께 만들어갈 인재를 기다립니다.
-            </p>
-            <div class="content"></div>
-          </div>
-        </div>
-        <div class="section4 centerArea">
-          <div class="fixArea"></div>
-        </div>
-      </main>
-      <!-- //main -->
-      <footer></footer>
-      <!-- //footer -->
     </div>
-    <!-- //wrap -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script/index.js"></script>
-  </body>
+    <!-- //searchPop -->
+    <!-- Swiper -->
+    <div class="hero">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/slide1_chil.png" alt="칠성사이다" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slide2_can.png" alt="칸타타" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slide3_sae.png" alt="새로" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/silde4_kru.png" alt="크러시" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slide5_han.jpg" alt="윤리경영" />
+          <div class="txtArea">
+            <p class="txt1"> 언제 어디서나, 모든 순간<br /> 고객의 곁에서 함께합니다. </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slide6_fall2.jpg" alt="품질환경경영" />
+          <div class="txtArea">
+            <p class="txt1"> 맑고 깨끗한 제품으로,<br /> 건강한 생태계 환경을 만듭니다. </p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/slide7_dev2.jpg" alt="혁신과변화" />
+          <div class="txtArea">
+            <p class="txt1"> 끊임없는 혁신과 변화를 통해,<br /> 더 큰 미래를 향해 나아갑니다. </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-controls">
+        <div class="swiper-pagination"></div>
+        <button class="playBtn" type="button" aria-label="자동재생 제어">
+          <span class="sr-only">재생/정지</span>
+        </button>
+      </div>
+      <!-- Add Navigation -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <span class="scrollTxt"> SCROLL DOWN </span>
+    </div>
+    <!-- //.hero -->
+    <main id="section">
+      <div class="section1 centerArea">
+        <div class="fixArea">
+          <p class="title">Company</p>
+          <p class="text">대한민국 대표 음료 기업, 롯데칠성음료를 소개합니다.</p>
+        </div>
+        <div class="content">
+          <div class="listDiv">
+            <div class="list">
+              <p class="type">매출액(2024.12 기준)</p>
+              <p class="con">
+                <span>4.02</span> 조원
+              </p>
+            </div>
+            <div class="list">
+              <p class="type">국내 음료 업계(닐슨인덱스 기준)</p>
+              <p class="con">
+                <span>1</span> 위
+              </p>
+            </div>
+            <div class="list">
+              <p class="type">국가고객만족지수 1위 (음료 부문)</p>
+              <p class="con">
+                <span>12</span> 년 연속
+              </p>
+            </div>
+            <div class="list">
+              <p class="type">해외수출</p>
+              <p class="con">
+                <span>70</span> 여개 나라
+              </p>
+            </div>
+          </div>
+          <div class="chillNews">
+            <div class="newsD">
+              <div class="leftA">
+                <p class="tit">롯데 칠성 소식</p>
+              </div>
+              <div class="btnA">
+                <span class="prev"></span>
+                <span class="next"></span>
+              </div>
+              <div id="newsList" class="rightA">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="txt">세상의 모든 술이 다시 태어나다! 제대로 만든 토닉워터! 새롭게 단장한 ...</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="txt">경포해수욕장에서 만나는 새로워진 처음처럼!</a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#" class="txt">제로 칼로리로 더욱 가볍고 상쾌하게! 롯데칠성음료, 출시 30년만에 ‘...</a>
+                  </div>
+                </div> <!-- //.swiper-wrapper -->
+              </div> <!-- //#newsList -->
+              <div class="endA">
+                <a href="#">소식 더보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ///////////////////section1 -->
+      <div class="section2 centerArea">
+        <div class="fixArea">
+          <p class="title">Brand</p>
+          <p class="text">반세기 동안 축적해온 노하우를 바탕으로 우수한 품질의 제품을 만듭니다.</p>
+        </div> <!-- //.fixArea -->
+        <div class="bgDiv">
+          <video id="video" autoplay loop muted>
+            <source src="video/section2_two_bg.mp4" type="video/mp4" />
+          </video>
+        </div> <!-- //.bgDiv -->
+        <div class="content">
+          <div class="tabConDiv">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">맑고 깨끗한</span>
+                  <span class="name">칠성사이다</span>
+                  <span class="txt">칠성사이다는 반세기 이상의 역사를 지닌 <br>대한민국 No.1 오리지널 탄산음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab1_img1.png" class="o1">
+                  <img src="./images/mainCon_two_tab1_img2.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">시원하고 상쾌한</span>
+                  <span class="name">펩시콜라</span>
+                  <span class="txt">전 세계가 사랑하는 펩시콜라의 <br>짜릿한 맛과 시원함을 경험해보세요.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab2_img1.png" class="o1">
+                  <img src="./images/mainCon_two_tab2_img2.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">델몬트</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab3_img1.png" class="o2">
+                  <img src="./images/mainCon_two_tab3_img2.png" class="o1">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">밀키스</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab4_img3.png" class="o1">
+                  <img src="./images/mainCon_two_tab4_img2.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">칸타타</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab5_img1_2021.png" class="o1">
+                  <img src="./images/mainCon_two_tab5_img2.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">핫식스</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab6_img1_2021.png" class="o1">
+                  <img src="./images/mainCon_two_tab6_img2.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">아이시스8.0 </span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab8_img2.png" class="o1">
+                  <img src="./images/mainCon_two_tab8_img1.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">레쓰비</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_tab9_img1.png" class="o1">
+                  <img src="./images/mainCon_two_tab9_img2.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">처음처럼</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_liquor1_img2_2021.png" class="o1">
+                  <img src="./images/mainCon_two_liquor1_img1.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">새로</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/left_final.png" class="o1">
+                  <img src="./images/right_final.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name">클라우드</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_liquor2_img2_2021.png" class="o1">
+                  <img src="./images/mainCon_two_liquor2_img1_2021.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+              <div class="swiper-slide">
+                <div class="col txtBox">
+                  <span class="tit">자연 그대로의</span>
+                  <span class="name"> 크러시</span>
+                  <span class="txt">신선한 과일의 맛을 그대로 담은 <br>프리미엄 과일음료입니다.</span>
+                  <div class="btnA df"><a href="#" class="btn">브랜드 소개</a><a href="#" class="btn">제품 구매하기</a></div>
+                </div>
+                <div class="col imgBox">
+                  <img src="./images/mainCon_two_liquor3_img2_2024.png" class="o1">
+                  <img src="./images/mainCon_two_liquor3_img1_2024.png" class="o2">
+                </div>
+              </div> <!-- //.swiper-slide -->
+            </div> <!-- //.swiper-wrapper -->
+          </div>
+          <div class="tabAreaD">
+          </div><!-- //.tabAreaD -->
+        </div> <!-- //.content -->
+      </div>
+      <div class="section3 centerArea">
+        <div class="fixArea">
+          <p class="title">Recruit</p>
+          <p class="txt2">사랑, 자유, 그리고 풍요로운 삶을 함께 만들어갈 인재를 기다립니다.</p>
+        </div>
+        <!--  //.fixArea -->
+        <div class="content">
+          <div class="recruitBox">
+            <div class="recruitSlider">
+              <div class="recruitDots"></div>
+              <div class="recruit-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide recruitSlide">
+                    <div class="recruitText">
+                      <p class="recruitTag">선배들의 이야기</p>
+                      <h2 class="recruitTitle">현장에선 내가 사장! 칠전팔기의<br />칠성맨</h2>
+                      <p class="recruitInfo">2016년 입사<br /><span class="recruitTeam">수도권1지사&nbsp;&nbsp;은평지점&nbsp;&nbsp;
+                        </span> <span class="recruitName">이규빈</span></p>
+                      <a href="#" class="recruitBtn">자세히보기</a>
+                    </div>
+                    <div class="recruitImg">
+                      <img src="images/202505130405432730.png" alt="이규빈 선배" />
+                    </div>
+                  </div> <!-- //.swiper-slide -->
+                  <div class="swiper-slide recruitSlide">
+                    <div class="recruitText">
+                      <p class="recruitTag">선배들의 이야기</p>
+                      <h2 class="recruitTitle">Nothing is impossible</h2>
+                      <p class="recruitInfo">2023년 입사<br /><span
+                          class="recruitTeam">주류수도권2지사&nbsp;&nbsp;주류수원지점&nbsp;&nbsp;</span> <span
+                          class="recruitName">서경준</span></p>
+                      <a href="#" class="recruitBtn">자세히보기</a>
+                    </div>
+                    <div class="recruitImg">
+                      <img src="images/202505130424562840.png" alt="서경준 선배" />
+                    </div>
+                  </div> <!-- //.swiper-slide -->
+                  <div class="swiper-slide recruitSlide">
+                    <div class="recruitText">
+                      <p class="recruitTag">선배들의 이야기</p>
+                      <h2 class="recruitTitle">스마트팩토리의 북두'칠성'</h2>
+                      <p class="recruitInfo">2024년 입사<br /><span
+                          class="recruitTeam">안성공장&nbsp;&nbsp;SF담당&nbsp;&nbsp;</span> <span
+                          class="recruitName">박세영</span></p>
+                      <a href="#" class="recruitBtn">자세히보기</a>
+                    </div>
+                    <div class="recruitImg">
+                      <img src="images/202505130440248610.png" alt="박세영 선배" />
+                    </div>
+                  </div> <!-- //.swiper-slide -->
+                </div> <!-- //.swiper-wrapper -->
+              </div> <!-- //.recruit-container -->
+            </div> <!-- //.recruitSlider -->
+          </div> <!-- //.recruitBox -->
+          <div class="linkBox">
+            <a href="#"><span>인재상</span></a>
+            <a href="#"><span>인사/교육제도</span></a>
+            <a href="#"><span>복리후생</span></a>
+            <a href="#"><span>직무소개</span></a>
+          </div> <!-- //.linkBox -->
+          <div class="innovBanner">
+            <div class="conArea">
+              <div class="txtArea">
+                <p class="tit">여러분의 아이디어가 실현되는</p>
+                <p class="txt1">오픈이노베이션에 참여하세요!</p>
+                <p class="txt2">누구나 참여할 수 있는 오픈이노베이션을 통해<br> 다양한 아이디어를 발굴하는 열린 혁신을 추구합니다.</p>
+                <a href="#" class="btn">자세히보기</a>
+              </div> <!-- //.txtArea -->
+              <div class="img"><img src="images/main_openInnov_img.png" alt=""></div>
+            </div>
+          </div>
+        </div> <!-- //.content -->
+      </div> <!-- //.section3 -->
+    </main>
+    <!-- //main -->
+    <footer>
+      <div class="logo"><img src="images/footer_logo.png" alt="footer_logo"></div>
+      <div class="util">
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">고정형 영상정보처리기기 운영방침</a>
+        <a href="#">롯데칠성몰</a>
+        <a href="#">신문고</a>
+        <a href="#">사이트맵</a>
+      </div>
+      <div class="infoDD">
+        <span>서울특별시 부산구 올림픽로 269 롯데캐슬골드 5층 </span>
+        <span>TEL : 0342-3479-9114</span>
+        <span>FAX : 0432-536-9767</span>
+        <span>대표이사 : 박상기</span>
+      </div>
+      <div class="copyR">Copyright © 2018 ROTTE CHILSUNG BEVERAGE CO.,LTD. ALL RIGHTS RESERVED</div>
+    </footer>
+    <!-- //footer -->
+  </div>
+  <!-- //wrap -->
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="script/js.js"></script>
+</body>
+
 </html>

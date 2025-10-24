@@ -1,0 +1,67 @@
+.section3 .centerArea {padding: 100px 0 0;}  /* 1024 */
+.section3 .content { margin: 400px auto 0; width: 100%; }
+.section3 .fixArea { opacity: 1; position: relative; width: 100%; top: 150px; z-index: 1; }
+.section3 .fixArea .txt2 { margin-top: 40px; font-size: 24px; position: relative; width: 100%; text-align: center; }
+.section3 .recruitBox { width: 1024px; margin: 0 auto; position: relative; height: 440px; }
+.section3 .recruitBox .recruit-container { overflow: hidden; }
+.recruitBox::after { content: ''; display: block; width: 200%; height: 370px; position: absolute; left: 0; top: 60px; background: #f4f4f4; }
+.section3 .fixArea .title { font-size: 240px; line-height: 170px; font-family: 'Montserrat'; font-weight: 700; text-align: center; width: 100%; position: relative; letter-spacing: -8px; color: #2c997b; }
+/* 상단 점들 */
+.recruitDots { position: absolute !important; display: flex; top: -30px !important; z-index: 9999999; }
+.recruitDots .swiper-pagination-bullet { width: 30px; height: 30px; background: url(../images/recruitRollD_indi.png) no-repeat center center; background-size: 30px !important; }
+.recruitDots .swiper-pagination-bullet-active { width: 30px; height: 30px; background: url(../images/recruitRollD_indi_on.png) no-repeat center center !important; background-size: 30px !important; }
+/* 슬라이드 */
+.recruitSlider .swiper-wrapper { height: 100%; width: 100%; position: relative; }
+.recruitSlide { padding-top: 70px; }
+/* 왼쪽 글자 */
+.recruitText { padding: 55px 60px; }
+.recruitTag { font-size: 16px; color: #666; font-weight: 900; }
+.recruitTitle { font-size: 40px; font-weight: 700; color: #333; letter-spacing: -.5px; line-height: 1.2; margin-bottom: 10px; }
+.recruitInfo { font-size: 22px; color: #333; font-weight: 300; line-height: 1.6; margin-bottom: 20px; }
+.recruitTeam { font-size: 18px; color: #444; }
+.recruitName { font-size: 18px; color: #333; font-weight: 600; }
+.recruitBtn { padding: 15px 30px; background: #333; color: #fff; text-decoration: none; border-radius: 30px; font-size: 16px; font-weight: 600; }
+.recruitBtn:hover { background: #000; }
+/* 오른쪽 사진 */
+.recruitImg { 
+    right: 0px; 
+    bottom: -30px; 
+    position: absolute; 
+    width: auto;
+    z-index: 10;
+    object-fit: cover;
+}
+.recruitImg>img {
+    border: none;
+    vertical-align: top;
+}
+/* ////////////////////////////////////////////////////////////// */
+/* 두번째 슬라이드부터 이미지 위치 보정 */
+.recruitSlide:not(:first-child) .recruitImg {
+    bottom: -65px;
+}
+
+/* ////////////////////////////////////////////////////////////// */
+
+/* ====================================  */
+/* ===linkBox===========================  */
+/* ====================================  */
+.linkBox { display: flex; overflow: hidden; width: 1024px; margin: 60px auto; }
+.linkBox a { font-size: 22px; color: white; padding: 20px 0 20px 80px; background-color: #666; width: 25%; margin-right: 1px; }
+.linkBox a:last-child { margin-right: 0; }
+.linkBox a { background-repeat: no-repeat; background-position: 40px center; }
+.linkBox a:nth-of-type(1) { background-image: url(../images/mainCon3_btn_icon1.png); }
+.linkBox a:nth-of-type(2) { background-image: url(../images/mainCon3_btn_icon2.png); }
+.linkBox a:nth-of-type(3) { background-image: url(../images/mainCon3_btn_icon3.png); }
+.linkBox a:nth-of-type(4) { background-image: url(../images/mainCon3_btn_icon4.png); }
+/* ====================================  */
+ /* ===innovBanner===========================  */
+/* ====================================  */
+.innovBanner { position:relative; margin:150px auto 0; &:after { position:absolute; content:''; background-color: #def2eb; width: 100%; left:0; top:50%; transform: translateY(-30%); height: 230px; }
+.conArea { max-width: 1024px; margin: 0 auto; position: relative; z-index: 1; }
+.txtArea { color: #333; padding-bottom: 60px; }
+.tit { font-size: 28px; font-weight: 800; }
+.txt1 { font-size: 50px; font-weight: 200; }
+.innovBanner .txt2 { font-size: 21px; line-height: 1.2; text-align: left; }
+.img { position: absolute; bottom: 0; right: -20px; }
+ }

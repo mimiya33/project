@@ -1,0 +1,13 @@
+footer { margin:auto; max-width:1024px; padding: 60px 0 55px; text-align: center;
+  .logo { display: inline; text-align: center; }
+  .util { display:flex; max-width:1024px; margin: 50px auto; column-gap: 60px; position: relative;  }
+  .util a { position: relative; font-size: 20px; color:#999; font-weight: 300; }
+  .util a::after { position:absolute; content: ''; background-color: #d2d2d2; transform: translateY(-50%); right: -25px; top: 50%; width: 5px; height: 5px; border-radius: 50%; }
+
+.infoDD { max-width:1024px; font-size: 16px; color: #888; display: flex; column-gap: 60px; justify-content: center; }
+  .infoDD span { position: relative; }
+  .infoDD span::after { position:absolute; content: ''; background-color: #565656; right: -30px; top: 25%; width: 1px; height: 50%; }
+  .infoDD span:last-of-type:after { position:absolute; content: ''; background-color: #56565600; right: -30px; top: 25%; width: 1px; height: 50%; }
+
+  .copyR { font-family: 'Montserrat-Light'; font-size: 14px; line-height: 26px; color: #bbb; margin-top: 10px; }
+}

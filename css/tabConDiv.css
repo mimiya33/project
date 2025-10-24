@@ -1,0 +1,29 @@
+.section2 { width: 100%; height: calc(100vh + 100px) !important; overflow: hidden  !important; ; min-height: auto  !important; }
+.section2 .fixArea { position: absolute; width: 100%; top:0; z-index: 8; opacity: 1; display: flex; flex-direction: column; align-items: center; padding-top: 150px; }
+.section2 .fixArea .title { top: 0px; font-size: 240px; line-height: 170px; font-family: 'Montserrat'; font-weight: 700; text-align: center; width: 100%; position: relative; letter-spacing: -8px; color: #fff; margin-bottom: 0; z-index: 11; }
+.section2 .text { margin: 40px 0px 0px; font-size: 24px; font-weight: 340; position: relative; width: 100%; text-align: center; color: #fff; align-self: center; z-index: 11; }
+.section2 .bgDiv #video { position: absolute; top: 0; left: 0; width: 100vw; height: 100%; object-fit: cover; z-index: 1; }
+.section2:after { content:''; position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; background: rgba(39, 145, 115, 0.9); z-index: 2; display: block; }
+/* 반응형 디자인 */
+.section2 .content { position: relative; z-index:99; width: 100%; margin: 260px auto 0; }
+.tabConDiv { line-height: 1; width: 1280px; margin: 0 auto; position: relative; z-index: 1; height: 100%; overflow: hidden; }
+.tabConDiv .swiper-wrapper { position: relative; height: 100%; padding: 60px; }
+.tabConDiv .swiper-slide { background: #fff; position: relative; width: 1240px; height: 400px; top: 50px; flex-shrink: 0; }
+.tabConDiv .swiper-slide .col { position: absolute; width: 50%; height: 100%; }
+.tabConDiv .swiper-slide .col.txtBox { left:10%; width: 40%; top:10% }
+.tabConDiv .swiper-slide .col.imgBox { left:50%; overflow: visible; }
+.tabConDiv .swiper-slide .txtBox span { display: block; }
+.tabConDiv .swiper-slide .tit { font-size: 50px; font-weight: 100; }
+.tabConDiv .swiper-slide .name { font-size: 80px; font-weight: 200; }
+.tabConDiv .swiper-slide .txt { font-size: 18px; line-height: 28px; margin-top: 35px; color: #666; letter-spacing: -0.8px; }
+.tabConDiv .btnA { display: flex; flex-direction: row; justify-content: flex-start; margin-top:30px; }
+.tabConDiv .btnA a { background: #149f5c; width: 180px; height: 60px ; line-height: 60px; border-radius: 50px; margin-right: 10px; font-size: 20px; color: #fff; text-decoration: none; text-align: center; }
+.tabConDiv .swiper-slide .col.imgBox img { position: absolute; z-index: 9999; max-width: none; }
+.tabConDiv .swiper-slide .col.imgBox img.o1 { top: -80px; right: 20px; }
+.tabConDiv .swiper-slide .col.imgBox img.o2 { top: -80px; right: -50px; }
+.tabAreaD { width: 1280px !important; height:50px; margin: 30px auto ; position: relative; text-align: center; display: flex; z-index: 99999; line-height: 50px; }
+.tabAreaD span.brand { height: 100%!important; color:white!important; font-size: 20px!important; opacity: .8; font-weight: 400 !important; width: 100% !important; display:block !important; position: relative!important; }
+.tabAreaD span.brand.swiper-pagination-bullet-active { font-weight: 700 !important; opacity: 1 !important; }
+.tabAreaD .swiper-pagination-bullet { background: transparent !important; cursor: pointer !important; }
+.section2 .content:after { content:''; position: absolute; background: white; left: 0; right: 0; top:650px; height: 1px; }
+.brand.swiper-pagination-bullet-active::after { content:''!important; position: absolute!important; background: white!important; left: 50%!important;  height: 15px!important; width: 15px!important; border-radius: 50%; transform: translate(-50%,-60%);}
