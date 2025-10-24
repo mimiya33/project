@@ -335,3 +335,4 @@ function initSearchPop() {
     console.error("검색 요소를 찾을 수 없습니다:", { searchBtn, searchPop });
   }
 }
+
