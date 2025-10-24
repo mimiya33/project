@@ -1,13 +1,120 @@
-footer { margin:auto; max-width:1024px; padding: 60px 0 55px; text-align: center;
-  .logo { display: inline; text-align: center; }
-  .util { display:flex; max-width:1024px; margin: 50px auto; column-gap: 60px; position: relative;  }
-  .util a { position: relative; font-size: 20px; color:#999; font-weight: 300; }
-  .util a::after { position:absolute; content: ''; background-color: #d2d2d2; transform: translateY(-50%); right: -25px; top: 50%; width: 5px; height: 5px; border-radius: 50%; }
+/* footer.css - cleaned and ready to use */
 
-.infoDD { max-width:1024px; font-size: 16px; color: #888; display: flex; column-gap: 60px; justify-content: center; }
-  .infoDD span { position: relative; }
-  .infoDD span::after { position:absolute; content: ''; background-color: #565656; right: -30px; top: 25%; width: 1px; height: 50%; }
-  .infoDD span:last-of-type:after { position:absolute; content: ''; background-color: #56565600; right: -30px; top: 25%; width: 1px; height: 50%; }
+/* footer 기본 영역 */
+footer {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 60px 0 55px;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-  .copyR { font-family: 'Montserrat-Light'; font-size: 14px; line-height: 26px; color: #bbb; margin-top: 10px; }
+/* 로고 (footer 내부에서만 적용) */
+footer .logo {
+  display: inline-block;
+  text-align: center;
+}
+
+/* util 영역 (footer 내) */
+footer .util {
+  display: flex;
+  max-width: 1024px;
+  margin: 50px auto;
+  column-gap: 60px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+footer .util a {
+  position: relative;
+  font-size: 20px;
+  color: #999;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+/* util 링크 사이의 작은 원(구분자) */
+footer .util a::after {
+  position: absolute;
+  content: '';
+  background-color: #d2d2d2;
+  transform: translateY(-50%);
+  right: -25px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+/* infoDD (footer 내부에 포함될 경우 footer .infoDD 로 사용해도 안전) */
+footer .infoDD {
+  max-width: 1024px;
+  font-size: 16px;
+  color: #888;
+  display: flex;
+  column-gap: 60px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+footer .infoDD span {
+  position: relative;
+  display: inline-block;
+  padding-right: 30px; /* 구분선 공간 확보 */
+  box-sizing: border-box;
+}
+
+/* 각 항목 우측의 세로 구분선 */
+footer .infoDD span::after {
+  position: absolute;
+  content: '';
+  background-color: #565656;
+  right: 0;
+  top: 25%;
+  width: 1px;
+  height: 50%;
+  box-sizing: border-box;
+}
+
+/* 마지막 항목은 구분선 숨김 */
+footer .infoDD span:last-of-type::after {
+  background-color: transparent; /* 명시적으로 숨김 */
+}
+
+/* 카피라이트 */
+footer .copyR {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 26px;
+  color: #bbb;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+/* 반응형(간단) : 화면 좁아지면 flex를 세로로 */
+@media (max-width: 768px) {
+  footer .util,
+  footer .infoDD {
+    flex-direction: column;
+    column-gap: 16px;
+    row-gap: 8px;
+  }
+
+  footer .infoDD span {
+    padding-right: 0;
+  }
+
+  footer .infoDD span::after {
+    display: none; /* 모바일에서 구분선 제거 */
+  }
+
+  footer .util a::after {
+    display: none; /* 모바일에서 원 제거 */
+  }
 }
